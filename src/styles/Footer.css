@@ -1,0 +1,71 @@
+.footer {
+    position: relative;
+    height: 3rem;
+    background: lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.social {
+    margin: auto;
+}
+
+.social__link {
+    width: 4rem;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    box-sizing: border-box;
+}
+
+.social__icon {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: white;
+
+}
+
+.social__link:hover {
+    border-color: grey;
+    cursor: pointer;
+}
+
+.social__link:hover .social__icon {
+    color: grey;
+}
+
+.social__tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.social__text {
+    visibility: hidden;
+    width: 150px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 15;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+}
+
+.social__text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: grey transparent transparent transparent;
+}
+
+.social__tooltip:hover .social__text {
+    visibility: visible;
+}
