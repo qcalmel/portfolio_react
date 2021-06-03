@@ -1,10 +1,13 @@
 import "../styles/Header.css"
 import pictureOfMe from "../assets/me.png"
 const Header = () => {
-
+    const toggleMenu = () => {
+        const menu = document.querySelector('.Menu')
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block'
+    }
     return (
         <div className="header">
-            <div className="menu__btn">
+            <div className="menu__btn" onClick={toggleMenu}>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
                      className="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 448 512">

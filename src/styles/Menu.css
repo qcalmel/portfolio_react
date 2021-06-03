@@ -1,0 +1,63 @@
+.Menu__nav {
+    height: 3rem;
+    background: lightgrey;
+    text-align: center;
+    line-height: 3rem;
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.Menu__item {
+    padding: 0 1rem 0 1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.Menu__item--active{
+    color: grey;
+    font-weight: bold;
+}
+
+
+.Menu__overlay{
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 20%;
+    position: absolute;
+    top: 0;
+    left:0;
+    display: none;
+}
+
+.Menu__item:hover {
+    color: grey;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .Menu{display: none}
+    .Menu__nav{
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        top: 0;
+        z-index: 25;
+    }
+    .Menu__overlay{
+        display: block;
+        z-index: 20;
+    }
+    .Menu__item{
+        font-size: 2rem;
+        line-height: 75px;
+        height: 25%;
+        display: block;
+    }
+}
