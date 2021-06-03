@@ -22,7 +22,7 @@ return (
                 <span className="social__text">Envoyer un mail</span>
                 <FontAwesomeIcon className={"social__icon"} icon={faEnvelope}/>
             </a>
-            <span aria-label="pour imprimer ce CV" className="social__link social__tooltip" onClick="window.print()">
+            <span aria-label="pour imprimer ce CV" className="social__link social__tooltip" onClick={window.print}>
             <span className="social__text">Imprimer ce CV</span>
             <FontAwesomeIcon className={"social__icon"} icon={faPrint}/>
         </span>

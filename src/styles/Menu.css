@@ -1,10 +1,15 @@
+/*.Menu {*/
+/*    transform: none;*/
+/*}*/
+/*.Menu--hidden {*/
+/*    transform: none;*/
+/*}*/
 .Menu__nav {
     height: 3rem;
-    background: lightgrey;
+    background: gray;
     text-align: center;
     line-height: 3rem;
     vertical-align: middle;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
 
@@ -15,44 +20,44 @@
     cursor: pointer;
     text-decoration: none;
     color: white;
+    position: relative;
 }
-.Menu__item--active{
-    color: grey;
-    font-weight: bold;
+.Menu__item:hover{
+
 }
-
-
-.Menu__overlay{
-    height: 100vh;
-    width: 100vw;
-    background: black;
-    opacity: 20%;
+.Menu__item:hover::after,.Menu__item--active::after {
+    content: "";
     position: absolute;
-    top: 0;
-    left:0;
-    display: none;
+    top: calc(100% - 14px);
+    left: 50%;
+    margin-left: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
 }
-
-.Menu__item:hover {
-    color: grey;
-    font-weight: bold;
-}
-
-
-
 @media only screen and (max-width: 600px) {
 
-    .Menu{display: none}
-    .Menu__nav{
+    .Menu{
         position: absolute;
+        z-index: 5;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0,0,0, 0.3);
+        transform: none;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+    .Menu--hidden {
+        visibility: hidden;
+    }
+    .Menu__nav{
+        transform: translate(-300px, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
         height: 300px;
         width: 300px;
-        top: 0;
-        z-index: 25;
     }
-    .Menu__overlay{
-        display: block;
-        z-index: 20;
+    .Menu__nav--show{
+        transform: none;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     }
     .Menu__item{
         font-size: 2rem;

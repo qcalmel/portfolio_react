@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     height: 3rem;
-    background: lightgrey;
+    background: gray;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: flex;
 }
@@ -33,7 +33,8 @@
 }
 
 .social__link:hover .social__icon {
-    color: grey;
+    color: lightgrey;
+    text-decoration: underline;
 }
 
 .social__tooltip {
