@@ -1,0 +1,9 @@
+.About {
+    font-variant: none;
+    font-size: 1.2rem;
+}
+
+.About blockquote {
+    color: grey;
+    font-size: 1.5rem;
+}
