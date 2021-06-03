@@ -2,7 +2,7 @@ import "../styles/Skills.css"
 const Skills = () => {
     return (
         <div className="Skills">
-            <h2 className="title">FORMATION</h2>
+            <h2 className="Skills__title">FORMATION</h2>
             <div className="formation-container">
                 <div className="formation-column">
                     <p className="formation-item">
@@ -20,9 +20,9 @@ const Skills = () => {
                     </p>
                 </div>
             </div>
-            <h2 className="title">OUTIL</h2>
+            <h2 className="Skills__title">OUTIL</h2>
             <div className="tool-container">
-                <div style={{display: 'inline-block'}}>
+                <div>
                     <h3>Front-End</h3>
                     <p>React</p>
                     <p>Angular / Ionic</p>
@@ -30,7 +30,7 @@ const Skills = () => {
                     <p>Bootstrap 4</p>
                 </div>
 
-                <div style={{display: 'inline-block'}}>
+                <div >
                     <h3>Back-End</h3>
                     <p>Node.js / Express</p>
                     <p>Symfony 5</p>
@@ -38,7 +38,7 @@ const Skills = () => {
                     <p>NoSQL / MongoDB</p>
                 </div>
 
-                <div style={{display: 'inline-block'}}>
+                <div >
                     <h3>Autre</h3>
                     <p>Git</p>
                     <p>Docker</p>
