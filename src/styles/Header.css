@@ -1,0 +1,65 @@
+.header {
+    background: right no-repeat url("../assets/header.jpg");
+    height: 12.5rem;
+    width: auto;
+    font-variant: small-caps;
+    color: white;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header div {
+    margin: auto;
+}
+
+.header__picture {
+    /*margin-left: 5%;*/
+    object-fit: cover;
+}
+
+.header__name {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.header__job {
+    font-size: 2rem;
+    display: block;
+}
+
+.menu__btn {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 190px;
+    }
+
+    .header .menu__btn {
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header .menu__btn:hover {
+        color: lightgrey;
+    }
+
+    .header__picture-container {
+        height: 100%;
+        width: 50%;
+    }
+
+    .header__picture {
+        bottom: 0;
+        left: 0;
+    }
+}
