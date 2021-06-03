@@ -1,27 +1,26 @@
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+
 import "../styles/Header.css"
 import pictureOfMe from "../assets/me.png"
 const Header = () => {
-    const toggleMenu = () => {
+    const showMenu = () => {
         const menu = document.querySelector('.Menu')
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block'
+        menu.classList.remove('Menu--hidden')
+        document.querySelector('.Menu__nav').classList.add('Menu__nav--show')
     }
     return (
-        <div className="header">
-            <div className="menu__btn" onClick={toggleMenu}>
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
-                     className="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
-                </svg>
+        <div className="Header">
+            <div className="menu__btn" onClick={showMenu}>
+                <FontAwesomeIcon className="menu__icon" icon={faBars}/>
             </div>
-            <div className="header__picture-container">
-                <img className="header__picture" alt="photo de moi" src={pictureOfMe}/>
+            <div className="Header__picture-container">
+                <img className="Header__picture" alt="photo de moi" src={pictureOfMe}/>
             </div>
 
             <div>
-                <span className="header__name">quentin calmel</span>
-                <span className="header__job"><span className="non-letter-smallcaps">&lt;</span>developpeur web<span
+                <span className="Header__name">quentin calmel</span>
+                <span className="Header__job"><span className="non-letter-smallcaps">&lt;</span>developpeur web<span
                     className="non-letter-smallcaps">/&gt;</span></span>
             </div>
         </div>

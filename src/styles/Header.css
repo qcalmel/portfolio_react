@@ -1,4 +1,4 @@
-.header {
+.Header {
     background: right no-repeat url("../assets/header.jpg");
     height: 12.5rem;
     width: auto;
@@ -9,22 +9,22 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.header div {
+.Header div {
     margin: auto;
 }
 
-.header__picture {
+.Header__picture {
     /*margin-left: 5%;*/
-    object-fit: cover;
+
 }
 
-.header__name {
+.Header__name {
     display: block;
     font-size: 3rem;
     font-weight: bold;
 }
 
-.header__job {
+.Header__job {
     font-size: 2rem;
     display: block;
 }
@@ -33,33 +33,36 @@
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
-    .header {
-        height: 190px;
-    }
+.non-letter-smallcaps {
+    font-size: 70%;
+}
 
-    .header .menu__btn {
+@media only screen and (max-width: 600px) {
+    /*.Header {*/
+    /*    height: 190px;*/
+    /*}*/
+    .menu__btn {
         display: block;
         position: absolute;
-        width: 20px;
-        height: 20px;
         top: 10px;
         left: 10px;
         color: white;
         cursor: pointer;
     }
-
-    .header .menu__btn:hover {
+    .menu__btn:hover {
         color: lightgrey;
     }
-
-    .header__picture-container {
+    .menu__icon {
+        font-size: 30px;
+    }
+    .Header__picture-container {
         height: 100%;
         width: 50%;
     }
-
-    .header__picture {
+    .Header__picture {
+        height: 100%;
         bottom: 0;
         left: 0;
+        object-fit: cover;
     }
 }
