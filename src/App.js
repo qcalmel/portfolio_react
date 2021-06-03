@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -13,12 +14,15 @@ function App() {
             <div className="App">
                 <Header/>
                 <Menu/>
-                <Switch>
-                    <Route exact path={["/","/competences"]} component={Skills}/>
-                    <Route exact path={"/moi"} component={About}/>
-                    <Route exact path={"/projets"} component={Projects}/>
-                    <Route exact path={"/contact"} component={Contact}/>
-                </Switch>
+                <div className="content">
+                    <Switch>
+                        <Route exact path={["/", "/competences"]} component={Skills}/>
+                        <Route exact path={"/moi"} component={About}/>
+                        <Route exact path={"/projets"} component={Projects}/>
+                        <Route exact path={"/contact"} component={Contact}/>
+                    </Switch>
+                </div>
+                <Footer/>
             </div>
         </BrowserRouter>
 

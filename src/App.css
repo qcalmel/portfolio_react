@@ -1,12 +1,21 @@
 .App {
   font-family: Bahnschrift, Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  /*overflow: hidden;*/
   max-width: 900px;
+  height: 100vh;
   margin: 0 auto 0 auto;
+  display: grid;
+  grid-template-rows: 12.5rem 3rem auto 3rem;
 }
 
 @media only screen and (max-width: 600px) {
   html {
     font-size: 12px;
   }
+}
+
+.content{
+  padding: 15px;
+  background: white;
+  overflow: auto;
 }
