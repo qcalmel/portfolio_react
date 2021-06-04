@@ -15,6 +15,7 @@ const Menu = ({routes}) => {
                 {
                     routes.map((route)=>(
                         <NavLink
+                            key={route.name}
                             className="Menu__item"
                             activeClassName="Menu__item--active"
                             to={Array.isArray(route.path) ? route.path[1]: route.path}

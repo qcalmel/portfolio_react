@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {Route, useHistory, useLocation} from "react-router-dom";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Skills from "./components/Skills";
@@ -9,42 +9,67 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import {CSSTransition} from "react-transition-group";
 import "../src/styles/pageTransition.css"
+import {useSwipeable} from "react-swipeable";
+import {useState} from "react";
 
 function App() {
+    let history = useHistory()
+    const location = useLocation().pathname
     const routes = [
-        {path: ['/','/skills'], name: 'COMPETENCES', Component: Skills},
+        {path: ['/', '/skills'], name: 'COMPETENCES', Component: Skills},
         {path: '/about', name: 'PRESENTATION', Component: About},
         {path: '/projects', name: 'PROJETS', Component: Projects},
         {path: '/contact', name: 'CONTACT', Component: Contact}
     ]
+    const paths = routes.reduce((acc, route) => {
+        acc.push(Array.isArray(route.path) ? route.path[1] : route.path)
+        return acc
+    }, [])
+    const [transitionCSS, setTransitionCSS] = useState('page')
+    const swipeLocation = (swipeDirection) => {
+        const index = paths.indexOf(location)
+        if (swipeDirection === 'right') {
+            setTransitionCSS('page-right')
+        } else {
+            setTransitionCSS('page-left')
+        }
+        history.push(paths[index + (swipeDirection === 'left' ? +1 : -1)])
+        setTransitionCSS('page')
+    }
+    const handlers = useSwipeable({
+        onSwipedLeft: (() => swipeLocation('left')),
+        onSwipedRight: (() => swipeLocation('right')),
+        preventDefaultTouchmoveEvent: true
+    });
+    console.log(transitionCSS)
     return (
-        <BrowserRouter>
-            <div className="App">
-                <Header/>
-                <Menu routes={routes}/>
-                <div className="content">
-                    {
-                        routes.map(({path, Component}) => (
-                            <Route exact path={path}>
-                                {({match}) => (
-                                    <CSSTransition
-                                        in={match != null}
-                                        timeout={300}
-                                        classNames="page"
-                                        unmountOnExit
-                                    >
-                                        <div className="page">
-                                            <Component/>
-                                        </div>
-                                    </CSSTransition>
-                                )}
-                            </Route>
-                        ))
-                    }
-                </div>
-                <Footer/>
+
+
+        <div className="App">
+            <Header/>
+            <Menu routes={routes}/>
+            <div {...handlers} className="content">
+                {
+                    routes.map(({path, Component}) => (
+                        <Route key={Array.isArray(path) ? path[1] : path} exact path={path}>
+                            {({match}) => (
+                                <CSSTransition
+                                    in={match != null}
+                                    timeout={300}
+                                    classNames={transitionCSS}
+                                    unmountOnExit
+                                >
+                                    <div className="page">
+                                        <Component/>
+                                    </div>
+                                </CSSTransition>
+                            )}
+                        </Route>
+                    ))
+                }
             </div>
-        </BrowserRouter>
+            <Footer/>
+        </div>
 
     );
 }
