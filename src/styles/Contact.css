@@ -1,0 +1,23 @@
+.Contact {
+    font-size: 1.2rem;
+    font-variant: none;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.Contact a:link,.Contact a:visited,.Contact a:hover {
+    text-decoration: none;
+}
+
+.Contact a:link,.Contact a:visited {
+    color: black;
+}
+
+.Contact a:hover {
+    color: grey;
+}
+
+.Contact .hidden {
+    display: none;
+}
