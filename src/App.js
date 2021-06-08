@@ -27,7 +27,8 @@ function App() {
     }, [])
     const [transitionCSS, setTransitionCSS] = useState('page')
     const swipeLocation = (swipeDirection) => {
-        const index = paths.indexOf(location)
+        let index = paths.indexOf(location)
+        if(index < 0)  index = 0
         if (swipeDirection === 'right') {
             setTransitionCSS('page-right')
         } else {
@@ -41,7 +42,6 @@ function App() {
         onSwipedRight: (() => swipeLocation('right')),
         preventDefaultTouchmoveEvent: true
     });
-    console.log(transitionCSS)
     return (
 
 
