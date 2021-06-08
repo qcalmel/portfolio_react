@@ -2,7 +2,7 @@
     background: right no-repeat url("../assets/header.jpg");
     height: 12.5rem;
     width: auto;
-    font-variant: small-caps;
+    text-transform: uppercase;
     color: white;
     text-align: center;
     display: flex;
@@ -20,12 +20,12 @@
 
 .Header__name {
     display: block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 .Header__job {
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
 }
 

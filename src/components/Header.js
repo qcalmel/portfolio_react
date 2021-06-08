@@ -20,8 +20,7 @@ const Header = () => {
 
             <div>
                 <span className="Header__name">quentin calmel</span>
-                <span className="Header__job"><span className="non-letter-smallcaps">&lt;</span>developpeur web<span
-                    className="non-letter-smallcaps">/&gt;</span></span>
+                <span className="Header__job">&lt;developpeur back-end & front-end/&gt;</span>
             </div>
         </div>
 )
