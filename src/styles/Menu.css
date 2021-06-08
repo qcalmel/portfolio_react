@@ -4,6 +4,9 @@
 /*.Menu--hidden {*/
 /*    transform: none;*/
 /*}*/
+.Menu {
+    text-transform: uppercase;
+}
 .Menu__nav {
     height: 3rem;
     background: gray;

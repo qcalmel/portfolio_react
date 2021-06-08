@@ -16,10 +16,10 @@ function App() {
     let history = useHistory()
     const location = useLocation().pathname
     const routes = [
-        {path: ['/', '/skills'], name: 'COMPETENCES', Component: Skills},
-        {path: '/about', name: 'PRESENTATION', Component: About},
-        {path: '/projects', name: 'PROJETS', Component: Projects},
-        {path: '/contact', name: 'CONTACT', Component: Contact}
+        {path: ['/', '/skills'], name: 'compétences', Component: Skills},
+        {path: '/about', name: 'présentation', Component: About},
+        {path: '/projects', name: 'projets', Component: Projects},
+        {path: '/contact', name: 'contact', Component: Contact}
     ]
     const paths = routes.reduce((acc, route) => {
         acc.push(Array.isArray(route.path) ? route.path[1] : route.path)
