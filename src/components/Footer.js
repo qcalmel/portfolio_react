@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="social">
                 <a aria-label="vers le profil Linkedin" target="_blank" className="social__link tooltip"
                    href="https://www.linkedin.com/in/quentin-calmel-5b29661b5/">
-                    <span className="tooltip__text">Profil Linkedin</span>
+                    <span className="tooltip__text">Profil LinkedIn</span>
                     <FontAwesomeIcon className={"social__icon"} icon={faLinkedinIn}/>
                 </a>
                 <a aria-label="vers le repository GitHub" target="_blank" className="social__link tooltip"
