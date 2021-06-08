@@ -36,37 +36,3 @@
     color: lightgrey;
     text-decoration: underline;
 }
-
-.social__tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.social__text {
-    visibility: hidden;
-    width: 150px;
-    background-color: grey;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    z-index: 15;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-}
-
-.social__text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: grey transparent transparent transparent;
-}
-
-.social__tooltip:hover .social__text {
-    visibility: visible;
-}
