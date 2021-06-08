@@ -1,0 +1,57 @@
+@media only print {
+    html {
+        font-size: 11px;
+    }
+
+    .main{
+        padding: 0 40px 0 40px;
+    }
+    .page {
+        display: block;
+    }
+    #me blockquote{
+        margin-top: 40px;
+        font-weight: bold;
+    }
+    #skills .title:first-child{
+        margin-top: 30px;
+    }
+    .header {
+        color: black;
+        margin: 40px 0 40px 0;
+    }
+    .header img {
+        object-fit: cover;
+        border: solid 1px black;
+        width: 150px;
+        height: 150px;
+    }
+    #projects{
+        display: none;
+    }
+    .footer, .menu__nav {
+        display: none;
+    }
+    .flip-content-inner, .header {
+        box-shadow: none;
+    }
+    #contact{
+        position: absolute;
+        width: 100%;
+    }
+    .flip-content-front, .flip-content-back, .flip-content-inner {
+        all: unset;
+        width: 100%;
+    }
+    #contact p {
+        display: inline-block;
+        margin: 0 10px 0 10px;
+    }
+
+    #contact .hidden {
+        display: inline-block;
+    }
+    #contact p:last-child {
+        display: none;
+    }
+}
