@@ -1,4 +1,4 @@
-import {faReact, faHtml5, faCss3, faNodeJs, faAngular} from "@fortawesome/free-brands-svg-icons";
+import {faReact, faNodeJs, faAngular} from "@fortawesome/free-brands-svg-icons";
 
 import ionicIcon from "../assets/ionic.svg"
 import postegresqlIcon from "../assets/postgresql.svg"
@@ -6,7 +6,21 @@ import genshinPicture from "../assets/projects_img/genshin.jpg"
 import portfolioPicture from "../assets/projects_img/portfolio.jpg"
 import homeInventory from "../assets/projects_img/homeInventory.jpg"
 import memoBean from "../assets/projects_img/memoBean.jpg"
+import airbnbClone from "../assets/projects_img/airbnb clone.png"
 export const projects = [
+    {
+        name: "Clone d'Airbnb",
+        picture: airbnbClone,
+        description: "Un clone du front d'airbnb développé en équipe lors d'un bootcamp",
+        repository: "https://github.com/Airbnb-React-Formation/Airbnb-clone",
+        link: "https://bootcamp-react-airbnb-clone.netlify.app/",
+        technologies: [
+            {
+                name: "React",
+                faIcon: faReact
+            },
+        ]
+    },
     {
         name: "Portfolio",
         picture: portfolioPicture,
@@ -18,14 +32,6 @@ export const projects = [
                 name: "React",
                 faIcon: faReact
             },
-            {
-                name: "HTML 5",
-                faIcon: faHtml5
-            },
-            {
-                name: "CSS 3",
-                faIcon: faCss3
-            }
         ]
     },
     {
@@ -39,14 +45,6 @@ export const projects = [
                 name: "React",
                 faIcon: faReact
             },
-            {
-                name: "HTML 5",
-                faIcon: faHtml5
-            },
-            {
-                name: "CSS 3",
-                faIcon: faCss3
-            }
         ]
     },
     {
@@ -54,7 +52,7 @@ export const projects = [
         picture: memoBean,
         description: "Petit jeu de type mémo",
         repository: "https://github.com/qcalmel/TP_Ionic_Memory",
-        link: "https://calmelquentin.alwaysdata.net/memo-bean",
+        link: "https://memobean.netlify.app/home",
         technologies: [
             {
                 name: "Angular",
@@ -64,14 +62,6 @@ export const projects = [
                 name:"Ionic",
                 icon: ionicIcon
             },
-            {
-                name: "HTML 5",
-                faIcon: faHtml5
-            },
-            {
-                name: "CSS 3",
-                faIcon: faCss3
-            }
         ]
     },
     {
@@ -84,14 +74,6 @@ export const projects = [
             {
                 name: "React",
                 faIcon: faReact
-            },
-            {
-                name: "HTML 5",
-                faIcon: faHtml5
-            },
-            {
-                name: "CSS 3",
-                faIcon: faCss3
             },
             {
                 name: "Node.js",
