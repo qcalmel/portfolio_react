@@ -33,6 +33,6 @@
 }
 
 .social__link:hover .social__icon {
-    color: lightgrey;
+    color: var(--secondary-color);
     text-decoration: underline;
 }
