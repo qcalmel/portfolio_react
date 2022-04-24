@@ -9,7 +9,7 @@
 }
 .Menu__nav {
     height: 3rem;
-    background: gray;
+    background: var(--primary-color);
     text-align: center;
     line-height: 3rem;
     vertical-align: middle;
