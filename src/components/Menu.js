@@ -18,6 +18,7 @@ const Menu = ({routes}) => {
                             key={route.name}
                             className="Menu__item"
                             activeClassName="Menu__item--active"
+                            title={route.name}
                             to={Array.isArray(route.path) ? route.path[1]: route.path}
                         >
                             {route.name}
