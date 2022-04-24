@@ -4,6 +4,7 @@
 }
 
 .About blockquote {
-    color: grey;
+    color: var(--primary-color);
     font-size: 1.5rem;
+    font-weight: bold;
 }
