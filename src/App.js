@@ -16,8 +16,8 @@ function App() {
     let history = useHistory()
     const location = useLocation().pathname
     const routes = [
-        {path: ['/', '/skills'], name: 'compétences', Component: Skills},
-        {path: '/about', name: 'présentation', Component: About},
+        {path: ['/','/about'], name: 'présentation', Component: About},
+        {path: '/skills', name: 'compétences', Component: Skills},
         {path: '/projects', name: 'projets', Component: Projects},
         {path: '/contact', name: 'contact', Component: Contact}
     ]
