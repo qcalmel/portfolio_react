@@ -1,32 +1,44 @@
 .Header {
-    background: right no-repeat url("../assets/header.jpg");
+    background-color: white;
     height: 12.5rem;
     width: auto;
-    text-transform: uppercase;
-    color: white;
-    text-align: center;
+    color: black;
     display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+
 }
 
 .Header div {
     margin: auto;
 }
 
+.Header__picture-container {
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
 .Header__picture {
-    /*margin-left: 5%;*/
+    height: 100%;
 
 }
 
 .Header__name {
     display: block;
     font-size: 2.5rem;
-    font-weight: bold;
 }
 
 .Header__job {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     display: block;
+    font-weight: bolder;
+}
+
+.Header__lede{
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--primary-color);
 }
 
 .menu__btn {

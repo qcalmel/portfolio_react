@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/Header.css"
-import pictureOfMe from "../assets/me.png"
+import pictureOfMe from "../assets/logo.png"
 const Header = () => {
     const showMenu = () => {
         const menu = document.querySelector('.Menu')
@@ -14,13 +14,15 @@ const Header = () => {
             <div className="menu__btn" onClick={showMenu}>
                 <FontAwesomeIcon className="menu__icon" icon={faBars}/>
             </div>
-            <div className="Header__picture-container">
-                <img className="Header__picture" alt="photo de moi" src={pictureOfMe}/>
-            </div>
+
 
             <div>
-                <span className="Header__name">quentin calmel</span>
-                <span className="Header__job">&lt;developpeur back-end & front-end/&gt;</span>
+                <span className="Header__name">Quentin CALMEL</span>
+                <span className="Header__job">Un Développeur Web</span>
+                <span className="Header__lede">Curieux et passionné</span>
+            </div>
+            <div className="Header__picture-container">
+                <img className="Header__picture" alt="photo de moi" src={pictureOfMe}/>
             </div>
         </div>
 )
