@@ -1,6 +1,5 @@
 .App {
   font-family: Roboto, sans-serif;
-  /*overflow: hidden;*/
   max-width: 900px;
   height: 100vh;
   margin: 0 auto 0 auto;
@@ -20,7 +19,7 @@
 }
 
 .content{
-  padding: 15px;
+  padding: 30px;
   background: white;
   overflow: auto;
   position: relative;
