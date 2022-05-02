@@ -2,6 +2,7 @@ import "../styles/Footer.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedinIn, faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faPrint} from "@fortawesome/free-solid-svg-icons";
+import cv from "../assets/CV_Quentin_CALMEL_Développeur_Web.pdf"
 
 const Footer = () => {
     return (
@@ -22,10 +23,10 @@ const Footer = () => {
                     <span className="tooltip__text">Envoyer un mail</span>
                     <FontAwesomeIcon className={"social__icon"} icon={faEnvelope}/>
                 </a>
-                <span aria-label="pour imprimer ce CV" className="social__link tooltip">
+                <a href={cv} rel="noreferrer" aria-label="pour imprimer ce CV" target="_blank" className="social__link tooltip">
                     <span className="tooltip__text">Imprimer ce CV</span>
                     <FontAwesomeIcon className={"social__icon"} icon={faPrint}/>
-                </span>
+                </a>
             </div>
         </div>
     )
