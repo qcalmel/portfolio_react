@@ -16,19 +16,13 @@
     font-size: 1.2rem;
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
     position: relative;
-}
-.Menu__item:before {
-    display: block;
-    content: attr(title);
     font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
 }
 .Menu__item:hover,.Menu__item--active{
     font-weight: bold;
+    color: white;
 }
 .Menu__item:hover::after,.Menu__item--active::after {
     content: "";
