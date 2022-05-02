@@ -8,3 +8,21 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+.About__photo-container{
+    display: flex;
+    justify-content: center;
+}
+.About__photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    /*box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);*/
+    background: var(--secondary-color);
+
+}
+
+.About__photo img {
+    width: 100%;
+}
