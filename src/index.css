@@ -7,8 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --primary-color:#5f9dcf;
-  --primary-color-light:#66acd0 ;
-  --secondary-color: #eed8b1;
+  --secondary-color: #BCDAF4;
 
   background: var(--secondary-color);
 }
