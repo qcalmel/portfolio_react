@@ -1,7 +1,7 @@
 .Skills__title {
     margin-top: 30px;
     padding-bottom: 10px;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .Skills__title:first-child {
