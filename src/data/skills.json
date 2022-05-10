@@ -1,0 +1,54 @@
+[
+  {
+    "categoryName": "Frameworks / Bibliothèques",
+    "icon" : "library-icon",
+    "skills": [
+      "React",
+      "Angular",
+      "Symfony",
+      "Express",
+      "Bootstrap",
+      "MUI"
+    ]
+  },
+  {
+    "categoryName": "Langages",
+    "icon" : "code-icon",
+    "skills": [
+      "HTML",
+      "CSS",
+      "SCSS",
+      "JavaScript",
+      "TypeScript",
+      "SQL"
+    ]
+  },
+  {
+    "categoryName": "Autres",
+    "icon" : "gears-icon",
+    "skills": [
+      "Git",
+      "Scrum",
+      "Docker",
+      "Figma",
+      "PhotoShop",
+      "Illustrator",
+      "Anglais B1",
+      "Windows / Mac OS"
+    ]
+  },
+  {
+    "categoryName": "savoir être",
+    "icon" : "person-icon",
+    "skills": [
+      "Communication",
+      "Apprentissage",
+      "Curiosité",
+      "Remise en question",
+      "Adaptation",
+      "À l'écoute",
+      "Prise de recul",
+      "Perseverance"
+    ]
+  }
+]
