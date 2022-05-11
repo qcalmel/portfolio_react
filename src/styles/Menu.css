@@ -16,13 +16,13 @@
     font-size: 1.2rem;
     cursor: pointer;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: white;
     position: relative;
     font-weight: bold;
 }
 .Menu__item:hover,.Menu__item--active{
     font-weight: bold;
-    color: white;
+    color: var(--secondary-color);
 }
 .Menu__item:hover::after,.Menu__item--active::after {
     content: "";
