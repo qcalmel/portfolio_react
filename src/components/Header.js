@@ -1,5 +1,6 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {ReactComponent as Logo} from "../assets/portfolio-logo.svg";
 
 import "../styles/Header.css"
 import pictureOfMe from "../assets/logo.png"
@@ -22,7 +23,7 @@ const Header = () => {
                 <span className="Header__lede">Curieux et passionné</span>
             </div>
             <div className="Header__picture-container">
-                <img className="Header__picture" alt="photo de moi" src={pictureOfMe}/>
+                <Logo/>
             </div>
         </div>
 )
