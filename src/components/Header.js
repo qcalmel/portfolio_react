@@ -3,7 +3,6 @@ import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {ReactComponent as Logo} from "../assets/portfolio-logo.svg";
 
 import "../styles/Header.css"
-import pictureOfMe from "../assets/logo.png"
 const Header = () => {
     const showMenu = () => {
         const menu = document.querySelector('.Menu')
