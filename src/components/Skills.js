@@ -1,50 +1,57 @@
 import "../styles/Skills.css"
+import skills from "../data/skills.json"
+import {useEffect, useRef, useState} from "react";
+
+const Icon = ({name, size = 16, fill = "#000"}) => {
+    const ImportedIconRef = useRef(null);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        const importIcon = async () => {
+            try {
+                ImportedIconRef.current = (await import(`!!@svgr/webpack?-svgo,+titleProp,+ref!../assets/skills-icons/${name}.svg`)).default;
+
+            } catch (err) {
+                throw err;
+            } finally {
+                setLoading(false);
+            }
+        };
+        importIcon();
+    }, [name]);
+
+    if (!loading && ImportedIconRef.current) {
+        const {current: ImportedIcon} = ImportedIconRef;
+        return <ImportedIcon/>;
+    }
+
+    return null;
+};
+
 const Skills = () => {
+
     return (
         <div className="Skills">
-            <h2 className="Skills__title">FORMATION</h2>
-            <div className="formation-container">
-                <div className="formation-column">
-                    <p className="formation-item">
-                        <span className="year">2012</span>
-                        <span className="degree">concepteur graphique</span>
-                        <span className="school">mjm - graphic design - paris</span>
-                    </p>
-                </div>
-                <div className="formation-column">
-                    <p className="formation-item">
-                        <span className="year">2021</span>
-                        <span className="degree">developpeur web et web mobile</span>
-                        <span className="school">m<span
-                            className="non-letter-smallcaps">2</span>i formation - paris</span>
-                    </p>
-                </div>
-            </div>
-            <h2 className="Skills__title">OUTIL</h2>
-            <div className="tool-container">
-                <div>
-                    <h3>Front-End</h3>
-                    <p>React</p>
-                    <p>Angular / Ionic</p>
-                    <p>jQuery</p>
-                    <p>Bootstrap 4</p>
-                </div>
 
-                <div >
-                    <h3>Back-End</h3>
-                    <p>Node.js / Express</p>
-                    <p>Symfony 5</p>
-                    <p>SQL / MariaDB / PostgreSQL</p>
-                    <p>NoSQL / MongoDB</p>
-                </div>
-
-                <div >
-                    <h3>Autre</h3>
-                    <p>Git</p>
-                    <p>Docker</p>
-                    <p>Scrum</p>
-                    <p></p>
-                </div>
+            <div className="Skills__skills">
+                {skills.map((skillCategory) => (
+                    <div className="Skills__category">
+                        <h3 className="Skills__title">{skillCategory.categoryName}</h3>
+                        <div className="Skills__container">
+                            <div className="Skills__icon">
+                                <Icon
+                                    name={skillCategory.icon}
+                                />
+                            </div>
+                            <ul className="Skills__list">
+                                {skillCategory.skills.map((skill) => (
+                                    <li className="Skills__list-item">{skill}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
