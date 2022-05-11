@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+.Header__picture-container svg{
+    height: 100%;
+}
+
 .Header__picture {
     height: 100%;
 
