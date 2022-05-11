@@ -23,7 +23,7 @@
 .social__icon {
     display: inline-block;
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: white ;
 
 }
 
@@ -33,6 +33,6 @@
 }
 
 .social__link:hover .social__icon {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: underline;
 }
