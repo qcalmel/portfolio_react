@@ -1,62 +1,73 @@
 .App {
-  font-family: Roboto, sans-serif;
-  max-width: 900px;
-  height: 100vh;
-  margin: 0 auto 0 auto;
-  display: grid;
-  grid-template-rows: 12.5rem 3rem auto 3rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: Roboto, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem;
+    position: relative;
+    background: white;
+
 }
 
 @media only screen and (max-width: 600px) {
-  html {
-    font-size: 12px;
+    html {
+        font-size: 12px;
 
-  }
-  .App{
-    grid-template-rows: 12.5rem auto 3rem;
-  }
+    }
+
+    .App {
+        grid-template-rows: 12.5rem auto 3rem;
+    }
 }
 
-.content{
-  padding: 30px;
-  background: white;
-  overflow: auto;
-  position: relative;
-  overflow-x: hidden;
+.content {
+    padding: 30px;
+    background: white;
+    /*overflow: auto;*/
+    position: relative;
+    /*overflow-x: hidden;*/
 }
 
 .tooltip {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .tooltip__text {
-  visibility: hidden;
-  width: 150px;
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: absolute;
-  z-index: 15;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 15;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .tooltip__text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--primary-color) transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip__text {
-  visibility: visible;
+    visibility: visible;
+}
+
+.Section {
+    margin-bottom: 5rem;
+}
+
+.Section__title {
+    text-align: center;
+    padding-top: 7rem;
 }

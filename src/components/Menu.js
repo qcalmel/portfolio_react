@@ -1,53 +1,43 @@
-import {NavLink} from "react-router-dom";
-import "../styles/Menu.css"
+import "../styles/Menu.css";
+import { ReactComponent as Logo } from "../assets/portfolio-logo.svg";
 
-const Menu = ({routes}) => {
-
-    const hideMenu = () => {
-        if (window.innerWidth <= 600) {
-            document.querySelector('.Menu').classList.add('Menu--hidden')
-            document.querySelector('.Menu__nav').classList.remove('Menu__nav--show')
-        }
+const Menu = ({ routes, isMinimized }) => {
+  const hideMenu = () => {
+    if (window.innerWidth <= 600) {
+      document.querySelector(".Menu").classList.add("Menu--hidden");
+      document.querySelector(".Menu__nav").classList.remove("Menu__nav--show");
     }
+  };
 
-    const isActive = (match, location) => {
-        console.log(location)
-        if (!location) return false
-        const {pathname} = location
-        if (match?.isExact) {
-            return true
-        } else {
-            return pathname === "/"
+  return (
+    <div
+      className={"Menu" + (isMinimized ? " Menu--minimized" : "")}
+      onClick={hideMenu}
+    >
+      <div
+        className={
+          "Header-minimized" + (isMinimized ? " Header-minimized--show" : "")
         }
-
-    }
-
-    return (
-        <div className="Menu Menu--hidden Menu--shadow" onClick={hideMenu}>
-            <div className="Menu__nav">
-                {
-                    routes.map((route) => {
-                        const activeProp = {
-                            isActive: isActive
-                        }
-                        if (!Array.isArray(route.path)) delete activeProp.isActive
-                        return (
-                            <NavLink
-                                key={route.name}
-                                className="Menu__item"
-                                activeClassName="Menu__item--active"
-                                title={route.name}
-                                to={Array.isArray(route.path) ? route.path[1] : route.path}
-                                {...activeProp}
-                            >
-                                {route.name}
-                            </NavLink>
-                        )
-                    })
-                }
-            </div>
+      >
+        <div className="Header-minimized__logo">
+          <Logo />
         </div>
-    )
-}
+        <div className="Header-minimized__title">
+          <span className="Header-minimized__name">Quentin CALMEL</span>
+          <span className="Header-minimized__job"> Développeur Web</span>
+        </div>
+      </div>
+      <div
+        className={"Menu__nav" + (isMinimized ? " Menu__nav--minimized" : "")}
+      >
+        {routes.map((route) => (
+          <a className="Menu__item" href={route.path}>
+            {route.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Menu
+export default Menu;
