@@ -1,11 +1,18 @@
 .Header {
     background-color: white;
-    height: 12.5rem;
+    height: 20rem;
     width: auto;
     color: black;
     display: flex;
     position: relative;
+    transform: translateY(0px);
+    transition: transform 250ms ease-in-out;
+}
 
+.Header--hidden{
+    display: none;
+    transform: translateY(-200px);
+    transition: transform 250ms ease-in-out;
 }
 
 .Header div {
@@ -29,17 +36,17 @@
 
 .Header__name {
     display: block;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 .Header__job {
-    font-size: 2.5rem;
+    font-size: 4rem;
     display: block;
     font-weight: bolder;
 }
 
 .Header__lede{
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: bold;
     font-style: italic;
     color: var(--primary-color);
@@ -53,6 +60,47 @@
     font-size: 70%;
 }
 
+.Header-minimized{
+    height: 4.8rem;
+    align-items: center;
+    display: none;
+}
+
+.Header-minimized--show{
+    display: flex;
+}
+
+.Header-minimized__title{
+    font-size: 2rem;
+}
+.Header-minimized__name{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.Header-minimized__job{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+.Header-minimized__logo{
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem 0.5rem 0;
+}
+.Header-minimized__logo svg {
+    height: 100%;
+}
+
+.Header-minimized__nav{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.Header-minimized__nav-item{
+
+}
+
+.margin{
+    height: 20rem;
+}
 @media only screen and (max-width: 600px) {
     /*.Header {*/
     /*    height: 190px;*/
