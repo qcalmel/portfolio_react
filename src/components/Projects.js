@@ -31,7 +31,6 @@ const Projects = () => {
                       {technology.faIcon ? (
                         <FontAwesomeIcon icon={technology.faIcon} />
                       ) : (
-                        // <img src={technology.icon} alt={technology.name} />
                         <SvgIcon name={technology.icon} />
                       )}
                     </div>
