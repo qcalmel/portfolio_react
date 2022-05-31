@@ -53,10 +53,6 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: flex;
-    /*border-radius: 1.2rem;*/
-    /*padding: 1rem;*/
-    /*box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);*/
-    /*background-color: #fdfdfd;*/
 }
 .Career__icon{
     font-size: 3rem;
@@ -95,4 +91,19 @@
 
 .Career__event:after {
 
+}
+
+@media only screen and (max-width: 640px) {
+    .Career__date{
+        max-width: 6rem;
+    }
+    .Career__time{
+        width: 10rem;
+    }
+    .Career__timeline:after {
+        left: 8rem;
+    }
+    .Career__time:after {
+        left: 7.5rem;
+    }
 }
