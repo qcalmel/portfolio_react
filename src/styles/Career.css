@@ -1,0 +1,98 @@
+.Career {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Career__timeline {
+    position: relative;
+}
+
+.Career__timeline:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0.5rem;
+    background-color: var(--primary-color);
+    left: 15rem;
+    top: 0
+}
+
+.Career__item {
+    display: flex;
+}
+
+
+.Career__time {
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.Career__date{
+    font-size: 2rem;
+}
+
+.Career__duration{
+    color: grey;
+}
+
+.Career__time:after {
+    position: absolute;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    left: 14.5rem;
+}
+
+.Career__event {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    /*border-radius: 1.2rem;*/
+    /*padding: 1rem;*/
+    /*box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);*/
+    /*background-color: #fdfdfd;*/
+}
+.Career__icon{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5rem;
+    flex-shrink: 0;
+}
+
+.Career__content{
+
+}
+.Career__title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.Career__event--training {
+    color: var(--primary-color);
+}
+
+.Career__event--experience {
+    color: var(--secondary-color);
+}
+
+.Career__place {
+    color: black;
+    padding-bottom: 1rem;
+}
+.Career__soft-skills{
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.Career__event:after {
+
+}
