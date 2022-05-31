@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Projects.css";
 import { projects } from "../data/projects";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faAirbnb } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import SvgIcon from "./SvgIcon";
 
 const Projects = () => {
