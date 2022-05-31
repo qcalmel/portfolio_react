@@ -9,19 +9,10 @@
 
 }
 
-@media only screen and (max-width: 640px) {
-    html {
-        font-size: 50%;
-
-    }
-}
-
 .content {
     padding: 30px;
     background: white;
-    /*overflow: auto;*/
     position: relative;
-    /*overflow-x: hidden;*/
 }
 
 .tooltip {
