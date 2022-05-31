@@ -36,19 +36,5 @@
       "Anglais B1",
       "Windows / Mac OS"
     ]
-  },
-  {
-    "categoryName": "savoir être",
-    "icon" : "person-icon",
-    "skills": [
-      "Travail d'équipe",
-      "Communication",
-      "Apprentissage",
-      "Curiosité",
-      "Remise en question",
-      "Adaptation",
-      "Prise de recul",
-      "Perseverance"
-    ]
   }
 ]
