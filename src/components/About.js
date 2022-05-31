@@ -10,40 +10,32 @@ const About = () => {
         </div>
       </div>
       <blockquote>
-        Mais pourquoi n'ai-je pas fait ce métier plus tôt ?
+        Bonjour, moi c'est Quentin. Bienvenue sur mon portfolio.
       </blockquote>
       <p>
-        Moi c'est Quentin, j'ai 30 ans et j'ai récemment rejoint le monde
-        merveilleux du développement après une reconversion professionnelle.
+        J'ai récemment rejoint le merveilleux monde du développement web après
+        une reconversion professionnelle.
       </p>
-
       <p>
-        Cette question a longtemps résonné dans ma tête depuis mon changement de
-        métier.
-        <br />
-        C'est vrai, depuis mon plus jeune âge, j'ai toujours été accro à
-        l'informatique, je ne compte plus le nombre d'ordinateurs que j'ai
-        montés, bidouillés, réparés ou le nombre d'heures passées à apprendre
-        tout un tas de logiciels.
+        J'ai très vite compris que ce domaine était fait pour moi tant les
+        tâches, à accomplir au quotidien, et les compétences requises me
+        correspondaient.
       </p>
-
-      <p>Et aujourd'hui, j'ai trouvé ma voie.</p>
-
       <p>
-        A chaque nouveau projet, ce sont de nouvelles découvertes qui permettent
-        de m'améliorer et d'étancher ma soif d'en apprendre toujours plus.
+        J'ai toujours été un féru d'informatique et je suis accoutumé sur le
+        fait d'acquérir, en permanence, de nouvelles connaissances.
       </p>
-
       <p>
-        Dans ce métier, je retrouve plein d'aspects que j'apprécie au quotidien:
-        la curiosité, la rigueur, l'entraide, la polyvalence ou bien les
-        nombreuses possibilités dans la résolution d'un problème.
+        Les différents postes que j'ai pu occuper, durant ma carrière, même
+        s'ils n'ont pas de liens directs avec le développement informatique,
+        m'ont permis de développer un grand nombre de compétences générales qui
+        seront très utiles dans le développement des projets auquel je
+        participerais comme le travail en équipe, l'autonomie et la rapidité
+        d'adaptation.
       </p>
-
       <p>
-        Sinon que dire de plus à propos de moi ?le Japon est mon pays de coeur,
-        j'adore monter des maquettes et les road-trip à vélo ne me font pas
-        peur.
+        Aujourd'hui, je suis à la recherche d'un poste en Île-de-France en
+        télétravail ou présentiel.
       </p>
     </div>
   );
