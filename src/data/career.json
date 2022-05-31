@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Projet en groupe - Clone du Front d'Airbnb",
+    "place": "Bootcamp React",
+    "type": "experience",
+    "softSkills": "Travail et esprit d’équipe, prise de décision, résolution de problèmes",
+    "date": "2022",
+    "duration": "1 mois"
+  },
+  {
+    "title": "Bootcamp React",
+    "type": "training",
+    "place": "Cours en ligne et projet de groupe",
+    "date": "2021 - 2022",
+    "duration": "3 mois"
+  },
+  {
+    "title": "Diplôme de niveau 5 - Développeur Web / Web Mobile",
+    "type": "training",
+    "place": "M2i Formation, Paris",
+    "date": "2020 - 2021",
+    "duration": "7 mois"
+  },
+  {
+    "title": "Graphiste / Webmaster",
+    "type": "experience",
+    "place": "Inter IKEA System B.V., Thiais",
+    "softSkills": "Respect des délais, communication, polyvalence",
+    "date": "2016 - 2018"
+  },
+  {
+    "title": "Logisticien",
+    "type": "experience",
+    "place": "Inter IKEA System B.V., Thiais",
+    "softSkills": "Organisation, esprit d’analyse, respect des bonnes pratiques",
+    "date": "2015 - 2022"
+  },
+  {
+    "title": "Diplôme de niveau 5 - Concepteur Graphique",
+    "type": "training",
+    "place": "MJM Graphic Design, Paris",
+    "date": "2012"
+  }
+]

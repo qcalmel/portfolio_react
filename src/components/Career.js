@@ -4,57 +4,9 @@ import {
   faGraduationCap,
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
+import careerList from "../data/career.json";
 
 const Career = () => {
-  const careerList = [
-    {
-      title: "Projet en groupe - Clone du Front d'Airbnb",
-      place: "Bootcamp React",
-      type: "experience",
-      softSkills:
-        "Travail et esprit d’équipe, prise de décision, résolution de problèmes",
-      date: "2022",
-      duration: "1 mois",
-    },
-    {
-      title: "Bootcamp React",
-      type: "training",
-      place: "Cours en ligne et projet de groupe",
-      softSkills: "",
-      date: "2021 - 2022",
-      duration: "3 mois",
-    },
-    {
-      title: "Diplôme de niveau 5 - Développeur Web / Web Mobile",
-      type: "training",
-      place: "M2i Formation, Paris",
-      softSkills: "",
-      date: "2020 - 2021",
-      duration: "7 mois",
-    },
-    {
-      title: "Graphiste / Webmaster",
-      type: "experience",
-      place: "Inter IKEA System B.V., Thiais",
-      softSkills: "Respect des délais, communication, polyvalence",
-      date: "2016 - 2018",
-    },
-    {
-      title: "Logisticien",
-      type: "experience",
-      place: "Inter IKEA System B.V., Thiais",
-      softSkills:
-        "Organisation, esprit d’analyse, respect des bonnes pratiques",
-      date: "2015 - 2022",
-    },
-    {
-      title: "Diplôme de niveau 5 - Concepteur Graphique",
-      type: "training",
-      place: "MJM Graphic Design, Paris",
-      softSkills: "",
-      date: "2012",
-    },
-  ];
   return (
     <div id="career" className="Career Section">
       <h1 className="Section__title">Parcours</h1>
@@ -78,7 +30,7 @@ const Career = () => {
               <div className="Career__content">
                 <div className="Career__title">{event.title}</div>
                 <div className="Career__place">{event.place}</div>
-                <div className="Career__soft-skills">{event.softSkills}</div>
+                <div className="Career__soft-skills">{event?.softSkills}</div>
               </div>
             </div>
           </div>
