@@ -24,6 +24,7 @@
     visibility: hidden;
     width: 150px;
     background-color: var(--primary-color);
+    border-radius: 1rem;
     color: white;
     text-align: center;
     padding: 10px 0;
