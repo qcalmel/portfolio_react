@@ -105,7 +105,7 @@
 }
 @media only screen and (max-width: 640px) {
     .Header{
-        height: 15rem;
+        height: 12rem;
     }
     .margin{
         height: 15rem;
@@ -120,10 +120,10 @@
         font-size: 2rem;
     }
     .Header-minimized__name{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     .Header-minimized__job{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     /*.Header {*/
     /*    height: 190px;*/
