@@ -118,6 +118,9 @@
 }
 
 @media only screen and (max-width: 460px) {
+    .Menu--minimized {
+        padding-left: 1rem;
+    }
     .Menu__nav {
         display: none;
         color: var(--primary-color);
@@ -128,7 +131,7 @@
         z-index: 10;
         top: 1rem;
         right: 1rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 .Menu .Menu__nav--showed{
