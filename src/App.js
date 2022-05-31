@@ -16,7 +16,7 @@ function App() {
     { path: "#contact", name: "contact" },
   ];
   return (
-    <div id="about" className="App">
+    <div className="App">
       <Header routes={routes} />
       <div className="content">
         <About />
