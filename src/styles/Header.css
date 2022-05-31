@@ -20,12 +20,12 @@
 }
 
 .Header__picture-container {
-    padding: 15px;
+    padding: 1.5rem;
     height: 100%;
     box-sizing: border-box;
 }
 
-.Header__picture-container svg{
+.Header__picture-container img{
     height: 100%;
 }
 
@@ -76,17 +76,19 @@
 .Header-minimized__name{
     font-size: 2.5rem;
     font-weight: bold;
+    padding-right: 0.5rem;
 }
 .Header-minimized__job{
     font-size: 2rem;
     color: var(--primary-color);
+    white-space: nowrap;
 }
 .Header-minimized__logo{
     height: 100%;
     box-sizing: border-box;
     padding: 0.5rem 1rem 0.5rem 0;
 }
-.Header-minimized__logo svg {
+.Header-minimized__logo img {
     height: 100%;
 }
 
@@ -101,32 +103,53 @@
 .margin{
     height: 20rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
+    .Header{
+        height: 15rem;
+    }
+    .margin{
+        height: 15rem;
+    }
+    .Header__name{
+        font-size: 3rem;
+    }
+    .Header__job{
+        font-size: 2.5rem;
+    }
+    .Header__lede{
+        font-size: 2rem;
+    }
+    .Header-minimized__name{
+        font-size: 2rem;
+    }
+    .Header-minimized__job{
+        font-size: 1.5rem;
+    }
     /*.Header {*/
     /*    height: 190px;*/
     /*}*/
-    .menu__btn {
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        color: white;
-        cursor: pointer;
-    }
-    .menu__btn:hover {
-        color: lightgrey;
-    }
-    .menu__icon {
-        font-size: 30px;
-    }
-    .Header__picture-container {
-        height: 100%;
-        width: 50%;
-    }
-    .Header__picture {
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        object-fit: cover;
-    }
+    /*.menu__btn {*/
+    /*    display: block;*/
+    /*    position: absolute;*/
+    /*    top: 10px;*/
+    /*    left: 10px;*/
+    /*    color: white;*/
+    /*    cursor: pointer;*/
+    /*}*/
+    /*.menu__btn:hover {*/
+    /*    color: lightgrey;*/
+    /*}*/
+    /*.menu__icon {*/
+    /*    font-size: 30px;*/
+    /*}*/
+    /*.Header__picture-container {*/
+    /*    height: 100%;*/
+    /*    width: 50%;*/
+    /*}*/
+    /*.Header__picture {*/
+    /*    height: 100%;*/
+    /*    bottom: 0;*/
+    /*    left: 0;*/
+    /*    object-fit: cover;*/
+    /*}*/
 }

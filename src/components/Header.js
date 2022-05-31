@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { ReactComponent as Logo } from "../assets/portfolio-logo.svg";
+import logo from "../assets/portfolio-logo.png";
 
 import "../styles/Header.css";
 import Menu from "./Menu";
@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 const Header = ({ routes }) => {
   const [isMinimized, setIsMinimized] = useState(false);
   const checkScrollYPos = () => {
-    const minScrollY = isMinimized ? 0 : 248;
+    const headerHeight = window.innerWidth < 640 ? 1 : 248;
+    const minScrollY = isMinimized ? 0 : headerHeight;
     if (window.scrollY > minScrollY) setIsMinimized(true);
     else setIsMinimized(false);
   };
@@ -39,7 +40,7 @@ const Header = ({ routes }) => {
           <span className="Header__lede">Curieux et passionné</span>
         </div>
         <div className="Header__picture-container">
-          <Logo />
+          <img src={logo} alt="logo" />
         </div>
       </div>
       <Menu routes={routes} isMinimized={isMinimized} />

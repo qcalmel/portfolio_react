@@ -1,37 +1,57 @@
 import "../styles/Menu.css";
-import { ReactComponent as Logo } from "../assets/portfolio-logo.svg";
+import logo from "../assets/portfolio-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, mark } from "@fortawesome/free-solid-svg-icons";
+
+import { useRef, useState } from "react";
 
 const Menu = ({ routes, isMinimized }) => {
-  const hideMenu = () => {
-    if (window.innerWidth <= 600) {
-      document.querySelector(".Menu").classList.add("Menu--hidden");
-      document.querySelector(".Menu__nav").classList.remove("Menu__nav--show");
-    }
+  const [isBurgerMenuShowed, setIsBurgerMenuShowed] = useState(false);
+  const navMenuRef = useRef();
+
+  const showBurgerMenu = () => {
+    setIsBurgerMenuShowed(true);
+    navMenuRef.current.classList.add("Menu__nav--showed");
+    document.body.classList.add("stop-scrolling");
+  };
+  const hideBurgerMenu = () => {
+    setIsBurgerMenuShowed(false);
+    navMenuRef.current.classList.remove("Menu__nav--showed");
+    document.body.classList.remove("stop-scrolling");
   };
 
   return (
-    <div
-      className={"Menu" + (isMinimized ? " Menu--minimized" : "")}
-      onClick={hideMenu}
-    >
+    <div className={"Menu" + (isMinimized ? " Menu--minimized" : "")}>
       <div
         className={
           "Header-minimized" + (isMinimized ? " Header-minimized--show" : "")
         }
       >
         <div className="Header-minimized__logo">
-          <Logo />
+          <img src={logo} alt="logo" />
         </div>
         <div className="Header-minimized__title">
           <span className="Header-minimized__name">Quentin CALMEL</span>
           <span className="Header-minimized__job"> Développeur Web</span>
         </div>
       </div>
+      <div className="Menu__burger">
+        {isBurgerMenuShowed ? (
+          <button className="Button__burger" onClick={hideBurgerMenu}>
+            <span>X</span>
+          </button>
+        ) : (
+          <button className="Button__burger" onClick={showBurgerMenu}>
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        )}
+      </div>
       <div
         className={"Menu__nav" + (isMinimized ? " Menu__nav--minimized" : "")}
+        ref={navMenuRef}
       >
         {routes.map((route) => (
-          <a className="Menu__item" href={route.path}>
+          <a onClick={hideBurgerMenu} className="Menu__item" href={route.path}>
             {route.name}
           </a>
         ))}
